@@ -171,9 +171,8 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2025-02-16 02:57:14 / 修改时间：04:01:19" itemprop="dateCreated datePublished" datetime="2025-02-16T02:57:14+08:00">2025-02-16</time>
+              <time title="创建时间：2025-02-16 04:12:46" itemprop="dateCreated datePublished" datetime="2025-02-16T04:12:46+08:00">2025-02-16</time>
             </span>
 
           
@@ -188,20 +187,20 @@
 
       
           <h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><p>进入Git官网<a target="_blank" rel="noopener" href="https://git-scm.com/">Git官网</a>，点击 *<strong>Downloads*</strong> 下载：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%871.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%871.png"></p>
 <p>选择你的系统类型，我的是 Windows：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%872.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%872.png"></p>
 <p>最新版本下载：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%873.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%873.png"></p>
 <p>安装一切默认</p>
 <p>在任意文件夹点击键盘shift+鼠标右键，出现下图中图标即完成：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%874.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%874.png"></p>
 <p>打开 Git Bash, 输入git，回车得到如下图：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%875.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%875.png"></p>
 <p>此时你的 Git 就已经安装完成啦！</p>
 <h1 id="绑定GitHub并提交文件"><a href="#绑定GitHub并提交文件" class="headerlink" title="绑定GitHub并提交文件"></a>绑定GitHub并提交文件</h1><p>1.绑定GitHub</p>
 <p>我们要用git上传文件到GitHub首先得利用SSH登录远程主机，而登录方式有两种：一种是口令登录；另一种是公钥登录。口令登录每次都要输入密码十分麻烦，而公钥登录就省去了输入密码的步骤，所以我们选择公钥授权。首先我们得在 GitHub 上添加 SSH key 配置，要想生成SSH key，就要先安装 SSH，不过我们安装了 Git Bash，其应该自带了 SSH。检验一下是否安装 SSH，我们在新建的文件夹中右键打开 Git Bash：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%876.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%876.png"></p>
 <p>如上图所示，即已安装 SSH. 然后，输入 ssh-keygen -t rsa 命令***（注意空格）***，表示我们指定 RSA 算法生成密钥，然后敲四次回车键，之后就就会生成两个文件，分别为秘钥 id_rsa 和公钥 id_rsa.pub. ***（注意：git中的复制粘贴不是 Ctrl+C 和 Ctrl+V，而是 Ctrl+insert 和 Shift+insert.）***文件的位置在 Git Bash 上面都有显示，默认生成在以下目录：</p>
 <ul>
 <li>Linux 系统：~&#x2F;.ssh</li>
@@ -212,15 +211,15 @@
 <p>$ cd <strong>~&#x2F;</strong>.ssh </p>
 <p>$ ls</p>
 <p>$ cat id_rsa.pub</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%877.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%877.png"></p>
 <p>如下图，先点击 <em><strong>SSH and GPG keys*</strong></em>**，***再点击 *<strong>New SSH key.*</strong></p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%878.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%878.png"></p>
 <p>将复制的公钥 id_rsa.pub 的内容粘贴到 key 内，再点击 <em><strong>Add SSH key*</strong></em>**，***如下图：（标题填不填无所谓）</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%879.png"></p>
-<p>验证是否成功，我们可以通过在 Git Bash 中输入 ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;">git@github.com</a> 进行检验：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8710.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%879.png"></p>
+<p>验证是否成功，我们可以通过在 Git Bash 中输入 ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#109;">git@github.com</a> 进行检验：</p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8710.png"></p>
 <p>第一次会出现这种情况，填 yes 就行，若出现下图中的情况，则表明绑定成功：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8711.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8711.png"></p>
 <p><strong>2.提交文件</strong></p>
 <ol>
 <li>直接将远程仓库 clone 到本地；</li>
@@ -228,19 +227,19 @@
 <li>将本地仓库的内容push到远程仓库。</li>
 </ol>
 <p>新建一个项目：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8712.png"></p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8713.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8712.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8713.png"></p>
 <p>点击进入项目：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8714.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8714.png"></p>
 <p>复制ssh地址链接：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8715.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8715.png"></p>
 <p>然后在我们准备当作本地仓库的文件夹打开git bash输入git clone+复制好的ssh地址：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8716.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8716.png"></p>
 <p>现在我们创建一个 text.txt 测试文件，如下图：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8717.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8717.png"></p>
 <p>git status 命令查看仓库状态</p>
 <p>text 已经是一个 Git 仓库了，而我们刚刚创建的文件 text.txt 没有被追踪，也就是没有提交到本地仓库。现在我们使用 git add 命令将文件添加到了「临时缓冲区」，再用 git push将其提交到本地仓库，如下图：</p>
-<p><img src="/.%5Cgithub%E4%BD%BF%E7%94%A8%5Cimage%5C%E5%9B%BE%E7%89%8718.png"></p>
+<p><img src="/.%5Cimage%5C%E5%9B%BE%E7%89%8718.png"></p>
 <p>这里已经是最新状态了</p>
 <p>如果是第一次提交的话，就会出现下图的情况，会让你输入用户名和邮箱：</p>
 <p><strong>#你只要再加两行代码就行：</strong></p>
